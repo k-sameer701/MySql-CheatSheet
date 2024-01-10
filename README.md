@@ -6,10 +6,11 @@
 
 # Introduction
 
-# What is a database?
+## What is a database?
     
 `A database is an organized collection of structured information or data.`
-# What is DBMS?
+
+## What is DBMS?
 
 `Database Management Systems (DBMS) are software systems used to store, retrieve, and run queries on data.`
 
@@ -34,6 +35,6 @@ It is of two types:
     ![types-db](https://github.com/k-sameer701/Learn-SQL/assets/103239208/a2694b9b-191d-44a7-8241-73779925b2c6)
 
 
-# What is MySQL?
+## What is MySQL?
 
 `MySQL is a relational database management system (RDBMS) developed by Oracle i.e. based on structured query language (SQL).`
