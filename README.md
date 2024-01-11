@@ -8,6 +8,9 @@
 * [4. Select-And-Where](#Select-And-Where)
 * [5. Constraints](#Constraints)
 * [6. AND-OR-NOT](#AND-OR-NOT)
+* [7. In-Operator](#In-Operator)
+* [8. LIKE-Operator](#LIKE-Operator)
+* [9. Between-NOT-Between](#Between-NOT-Between)
 
 # Introduction
 
@@ -465,5 +468,91 @@ They are specified during the table creation using the `CREATE TABLE` statement.
             SELECT * 
             FROM students 
             WHERE NOT status = 0;
-     
+
+# In-Operator
+
+## IN Operator
+
+`The SQL IN operator is used to specify multiple values in a WHERE clause for a SELECT, UPDATE, DELETE, or INSERT statement. It is typically used to reduce the use of multiple OR conditions in a query.`
+
+    Syntax:
+
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE column_name IN (value1, value2, ...);
+
+
+- `column1, column2, ...`: The columns you want to retrieve in the SELECT statement.
+- `table_name`: The name of the table from which to retrieve the data.
+- `column_name`: The column against which you want to compare values.
+- `(value1, value2, ...)`: The list of values to compare with the specified column.
+
+    Example:
+
+        SELECT *
+        FROM students
+        WHERE age IN (19,20);
+
+# LIKE-Operator
+
+## LIKE Operator
+
+The LIKE Operator is used in a WHERE Clause to serach for a specified pattern in a column.
+
+- The percent sign (%) represent zero, one, or multiple characters.
+- The underscore sign (_) represents one, single character.
+
+    Synatx:
+
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE column_name LIKE pattern;
+
+    Example:
+
+        SELECT name
+        FROM students
+        WHERE name LIKE "a%";
+
+## Patterns
+
+    'a%'    :   Starts with "a".
+    '%a'    :   End with "a".
+    '%or%'  :   Have "or" in any position.
+    '_r%'   :   Have "r" in the second position.
+    'a_%'   :   Starts with "a" and are at least 2 characters in length (including a).
+    'a__%'  :   Starts with "a" and are at least 3 characters in length (including a).
+    'a%o'   :   Starts with "a" and ends with "o".
+
+
+# Between-NOT-Between
+
+## BETWEEN & NOT BETWEEN
+
+`The BETWEEN and NOT BETWEEN operators in SQL are used to filter the result set based on a range of values. These operators are typically used in the WHERE clause of a SQL query.`
+
+    Syntax (BETEEN):
+
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE column_name BETWEEN value1 AND value2;
+
+    Example:
+
+        SELECT *
+        FROM students
+        WHERE age BETWEEN 20 AND 30;
+
+    Syntax (NOT BETWEEN):
+
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE column_name NOT BETWEEN value1 AND value2;
+
+    Example:
+
+        SELECT *
+        FROM students
+        WHERE age NOT BETWEEN 20 AND 30;
+
 
