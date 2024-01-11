@@ -5,6 +5,7 @@
 * [1. Introduction](#Introduction)
 * [2. Database-Table](#Database-Table)
 * [3. Inserting-Data](#Inserting-Data)
+* [4. Select-And-Where](#Select-And-Where)
 
 # Introduction
 
@@ -227,5 +228,134 @@ In MySQL, the specific date and time data types include:
         (6, 'Taylor Davis', 'taylor@example.com', 'hashed_password6', '+1122334477', '876 Maple St, Village', '1985-05-30', 'F', 1);
 
 ![Screenshot (2660)](https://github.com/k-sameer701/Learn-SQL/assets/103239208/2a40d253-4d40-4af2-8091-e3833db1cc21)
+
+# Select-And-Where
+
+## SELECT Statement
+
+`In MySQL, you use the SELECT statement to retrieve data from one or more tables. `
+
+    Syntax:
+
+        SELECT column1, column2, ...
+        FROM table_name;
+
+    Example:
+
+        SELECT name, email
+        FROM users;
+
+
+    If you want to select all columns from a table, you can use the wildcard *
+
+    Syntax:
+
+        SELECT *
+        FROM table_name;
+
+    Example:
+
+        SELECT *
+        FROM users;
+
+## WHERE Clause
+
+`The WHERE clause is used to filter records.`
+
+`It is used to extract only those records that fulfill a specified condition.`
+
+    Syntax:
+
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE condition
+
+    Example:
+        
+        SELECT id, name, email
+        FROM users
+        WHERE gender = 'M' AND status = 1;
+
+## WHERE Conditions
+
+`In SQL, the WHERE clause is used to filter the rows returned by a query based on specified conditions. Here are common conditions that can be used in conjunction with the WHERE clause:`
+
+1. **Equality (`=`):**
+   - Used to filter rows where a specified column is equal to a specific value.
+   - Example: `WHERE column_name = value;`
+
+2. **Inequality (`!=` or `<>`):**
+   - Used to filter rows where a specified column is not equal to a specific value.
+   - Example: `WHERE column_name <> value;`
+
+3. **Comparison Operators (`<`, `>`, `<=`, `>=`):**
+   - Used to filter rows based on numerical or date comparisons.
+   - Example: `WHERE column_name > value;`
+
+4. **LIKE Operator:**
+   - Used to perform pattern matching with wildcard characters (`%` for any sequence of characters, `_` for a single character).
+   - Example: `WHERE column_name LIKE 'pattern';`
+
+5. **BETWEEN Operator:**
+   - Used to filter rows within a specified range.
+   - Example: `WHERE column_name BETWEEN value1 AND value2;`
+
+6. **IN Operator:**
+   - Used to filter rows where a column matches any value in a specified list.
+   - Example: `WHERE column_name IN (value1, value2, ...);`
+
+7. **IS NULL and IS NOT NULL:**
+   - Used to filter rows where a column is (or is not) NULL.
+   - Example: `WHERE column_name IS NULL;`
+
+8. **Logical Operators (AND, OR, NOT):**
+   - Used to combine multiple conditions.
+   - Example: `WHERE condition1 AND condition2;`
+
+9. **EXISTS Operator:**
+   - Used to check if a subquery returns any results.
+   - Example: `WHERE EXISTS (SELECT * FROM another_table WHERE condition);`
+
+10. **ANY and ALL Operators:**
+    - Used with subqueries for comparing values.
+    - Example: `WHERE column_name > ANY (SELECT column_name FROM another_table);`
+
+## ALIAS
+
+`In SQL, an alias is a temporary name. It is used to provide a more readable or meaningful name to a table or column, especially when dealing with complex queries or when working with the result of a query.`
+
+There are two main types of aliases:
+
+1. **Table Alias:**
+   - Used to give a table a temporary, alternative name in a query.
+
+   - Syntax:
+     
+            SELECT column1, column2, ...
+            FROM table_name AS alias_name
+            WHERE condition;
+     
+   - Example:
+     
+            SELECT name, id
+            FROM users AS Active_Users
+            WHERE status = 1;
+
+2. **Column Alias:**
+   - Used to assign a temporary name to a column in the result set.
+   
+   - Syntax:
+     
+            SELECT column_name AS alias_name, ...
+            FROM table_name
+            WHERE condition;
+            
+   - Example:
+     
+            SELECT name AS E_Name, id AS U_ID
+            FROM users 
+            WHERE status = 1;
+     
+
 
 
