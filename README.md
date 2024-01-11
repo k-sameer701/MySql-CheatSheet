@@ -14,6 +14,7 @@
 * [10. Order-By-And-Distinct](#Order-By-And-Distinct)
 * [11. Is-Null-And-Is-Not-Null](#Is-Null-And-Is-Not-Null)
 * [🌱 Limit-And-Offset](#Limit-And-Offset)
+* [🌱 Aggregate-Functions](#Aggregate-Functions)
 
 # Introduction
 
@@ -627,7 +628,7 @@ The LIKE Operator is used in a WHERE Clause to serach for a specified pattern in
         FROM students
         WHERE age IS NOT NULL;
 
-# Limit-And-Offset
+# ☘️ Limit-And-Offset
 
 ## LIMIT
 
@@ -661,7 +662,62 @@ The LIKE Operator is used in a WHERE Clause to serach for a specified pattern in
         FROM students
         LIMIT 3 OFFSET 2;
 
+# ☘️ Aggregate-Functions
 
+## AGGREGATE FUNCTIONS
+
+`In MySQL, aggregate functions are used to perform a calculation on a set of values and return a single value.`
+
+Here are some common aggregate functions in MySQL:
+
+1. **COUNT():**
+   - Counts the number of rows in a result set.
+    
+    Syntax:
+    
+        SELECT COUNT(column_name) FROM table_name WHERE condition;
+
+
+2. **SUM():**
+   - Calculates the sum of values in a numeric column.
+    
+    Syntax:
+        
+        SELECT SUM(column_name) FROM table_name WHERE condition;
+   
+
+3. **AVG():**
+   - Calculates the average of values in a numeric column.
+
+    Syntax:
+        
+        SELECT AVG(column_name) FROM table_name WHERE condition;
+   
+
+4. **MIN():**
+   - Finds the minimum value in a column.
+
+    Syntax:
+    
+        SELECT MIN(column_name) FROM table_name WHERE condition;
+   
+
+5. **MAX():**
+   - Finds the maximum value in a column.
+   
+    Syntax:
+    
+        SELECT MAX(column_name) FROM table_name WHERE condition;
+   
+
+    Example:
+
+        SELECT
+        SUM() AS total_sales,
+        AVG(sale_amount) AS average_sale,
+        COUNT(order_id) AS order_count
+        FROM sales
+        WHERE sale_date >= '2022-01-01';
 
 
 
