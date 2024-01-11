@@ -746,4 +746,190 @@ Here are some common aggregate functions in MySQL:
         SET salary = salary * 1.1
         WHERE bonus > 5000;
 
+## Delete-Query
 
+## ☘️ DELETE 
+
+- `A delete query is used in SQL to remove records from a table based on specified conditions.`
+- `Please be careful when using delete queries, especially without a WHERE clause, as it can result in the removal of all records from the specified table. `
+
+    🔥 Syntax:
+
+        DELETE FROM table_name
+        WHERE condition;
+
+    👀 Example:
+
+        DELETE FROM employees
+        WHERE salary < 30000;
+
+## Primary-And-Foreign-Key
+
+## ☘️ PRIMARY KEY
+
+- `A primary key is a unique identifier for a record in a database table.`
+- `It must contain unique values and cannot have NULL values.`
+- `Each table in a relational database typically has a primary key that uniquely identifies each record in that table.`
+- `The primary key is used to establish relationships between tables.`
+
+
+    👀 Example
+
+        CREATE TABLE cities 
+        (
+            city_id INT PRIMARY KEY,
+            city_name VARCHAR(50),
+            country VARCHAR(50)
+        );
+
+        INSERT INTO cities (city_id, city_name, country)
+        VALUES
+        (1, 'New York', 'USA'),
+        (2, 'London', 'UK'),
+        (3, 'Tokyo', 'Japan'),
+        (4, 'Paris', 'France');
+
+## ☘️ FOREIGN KEY:
+
+- `A foreign key is a field in a database table that is a primary key in another table.`
+- `It establishes a link between the data in two tables.`
+- `The foreign key in one table points to the primary key in another table.`
+- `It is used to maintain referential integrity between the two related tables.`
+
+    👀 Example
+
+        CREATE TABLE students 
+        (
+            student_id INT PRIMARY KEY,
+            student_name VARCHAR(50),
+            age INT,
+            city_id INT,
+            FOREIGN KEY (city_id) REFERENCES cities(city_id)
+        );
+
+        INSERT INTO students (student_id, student_name, age, city_id)
+        VALUES
+        (101, 'John Doe', 20, 1), 
+        (102, 'Jane Smith', 22, 2), 
+        (103, 'Ken Yamada', 21, 3), 
+        (104, 'Emma Johnson', 23, 4);
+
+## Joins
+
+## ☘️ Join Query
+
+`Joins are operations that combine rows from two or more tables based on a related column between them. The purpose of joins is to retrieve data from multiple tables in a single result set.`
+
+![TABLE 1](https://github.com/k-sameer701/Learn-SQL/assets/103239208/5429a2a5-7c29-436a-92b5-908ece2aabe2)
+
+
+**1. Inner Join:**
+- Returns only the rows where there is a match in both tables based on the specified condition.
+
+        🔥 Syntax
+            SELECT *
+            FROM table1
+            INNER JOIN table2 ON table1.column = table2.column;
+
+        👀 Example
+            SELECT *
+            FROM students
+            INNER JOIN cities ON students.city_id = cities.city_id;
+
+
+**2. Left Join (or Left Outer Join):**
+- Returns all rows from the left table (`students`) and the matched rows from the right table (`cities`). If there is no match, NULL values are returned for columns from the right table.
+
+        🔥 Syntax
+            SELECT *
+            FROM table1
+            LEFT JOIN table2 ON table1.column = table2.column;
+
+        👀 Example
+            SELECT *
+            FROM students
+            LEFT JOIN cities ON students.city_id = cities.city_id;
+
+
+**3. Right Join (or Right Outer Join):**
+- Returns all rows from the right table (`cities`) and the matched rows from the left table (`students`). If there is no match, NULL values are returned for columns from the left table.
+
+        🔥 Syntax:
+            SELECT *
+            FROM table1
+            RIGHT JOIN table2 ON table1.column = table2.column;
+
+        👀 Example
+            SELECT *
+            FROM students
+            RIGHT JOIN cities ON students.city_id = cities.city_id;
+
+**4. Cross Join:**
+- Returns the Cartesian product of both tables, meaning every row from the left table is combined with every row from the right table.
+
+        🔥 Syntax:
+            SELECT *
+            FROM table1
+            CROSS JOIN table2;
+
+        👀 Example
+            SELECT *
+            FROM students
+            CROSS JOIN cities;
+
+## Sub-Query
+
+# ☘️ Sub Query
+
+`A subquery, also known as an inner query or nested query, is a query within another SQL query. Subqueries are enclosed in parentheses and can be used in various parts of a SQL statement, such as the SELECT, FROM, WHERE, and HAVING clauses.`
+
+    🔥 Syntax
+    
+        SELECT column_name
+        FROM table_name
+        WHERE
+        (SELECT column_name FROM table_name)
+
+    👀 Example
+
+        SELECT student_name
+        FROM students
+        WHERE age > (SELECT AVG(age) FROM students);
+
+## Exists-And-Not-Exists
+
+## ☘️ EXISTS:
+
+`The EXISTS operator is used to check if a subquery returns any rows. If the subquery returns at least one row, the condition is considered to be true, and the outer query continues.`
+
+    🔥 Syntax:
+       
+        SELECT column_name
+        FROM table1
+        WHERE EXISTS
+        (SELECT column_name FROM table_name2);
+
+    👀 Example:
+
+        SELECT name
+        FROM students
+        WHERE EXISTS
+        (SELECT id FROM cities WHERE name = 'London');
+
+## ☘️ NOT EXISTS:
+
+`The NOT EXISTS operator is the opposite of EXISTS. It is used to check if a subquery returns no rows. If the subquery returns no rows, the condition is considered to be true, and the outer query continues.`
+
+    🔥 Syntax
+    
+        SELECT column_name
+        FROM table1
+        WHERE NOT EXISTS
+        (SELECT column_name FROM table_name2);
+
+    👀 Example
+
+        SELECT name
+        FROM students
+        WHERE NOT EXISTS
+        (SELECT id FROM cities WHERE name = 'London');
