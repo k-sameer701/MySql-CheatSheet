@@ -15,6 +15,12 @@
 * [🌱 Is-Null-And-Is-Not-Null](#Is-Null-And-Is-Not-Null)
 * [🌱 Limit-And-Offset](#Limit-And-Offset)
 * [🌱 Aggregate-Functions](#Aggregate-Functions)
+* [🌱 Update-Query](#Update-Query)
+* [🌱 Delete-Query](#Delete-Query)
+* [🌱 Primary-And-Foreign-Key](#Primary-And-Foreign-Key)
+* [🌱 Joins](#Joins)
+* [🌱 Sub-Query](#Sub-Query)
+* [🌱 Exists-And-Not-Exists](#Exists-And-Not-Exists)
 
 ## Introduction 
 
@@ -720,5 +726,24 @@ Here are some common aggregate functions in MySQL:
         FROM sales
         WHERE sale_date >= '2022-01-01';
 
+
+## Update-Query
+
+## 🌱 UPDATE 
+
+- `An update query is a database operation that modifies existing records in a table.`
+- `Specify a condition that determines which records to update. If you omit the WHERE clause, all records in the table will be updated.`
+
+    🔥 Syntax:
+
+        UPDATE table_name
+        SET column1 = value1, column2 = value2, ...
+        WHERE condition;
+
+    👀 Example:
+
+        UPDATE employees
+        SET salary = salary * 1.1
+        WHERE bonus > 5000;
 
 
