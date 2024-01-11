@@ -2,7 +2,9 @@
 
 ## ⛄ Table of Content
 
-* [1. Introduction](#1️Introduction)
+* [1. Introduction](#Introduction)
+* [2. Database Table](#DatabaseTable)
+* [3. Inserting Data](#InsertingData)
 
 # Introduction
 
@@ -34,7 +36,8 @@ It is of two types:
 
 `MySQL is a relational database management system (RDBMS) developed by Oracle i.e. based on structured query language (SQL).`
 
-# What is a database table?
+# Database Table
+## What is a database table?
 `A database table is a collection of rows and columns that contains relational data.`
 
 ![table](https://github.com/k-sameer701/Learn-SQL/assets/103239208/4666a64d-aa02-4580-8261-f3ff67fc216a)
@@ -183,5 +186,46 @@ In MySQL, the specific date and time data types include:
 5. **YEAR:**
    Represents a four-digit year value.
 
+# Inserting Single Row
+
+    Syntax:
+
+        INSERT INTO table_name 
+        (column1, column2, column3, ...)
+        VALUES 
+        (value1, value2, value3, ...);
+
+    Example:
+
+        INSERT INTO users 
+        (id, name, email, password, contact, address, dob, gender, status)
+        VALUES 
+        (1, 'John Doe', 'john@example.com', 'hashed_password', '+123456789', '123 Main St, City', '1990-01-15', 'M', 1);
+
+# Inserting Data
+
+## Inserting Multiple Rows
+
+    Syntax:
+
+        INSERT INTO table_name 
+        (column1, column2, column3, ...)
+        VALUES 
+        (value1, value2, value3, ...),
+        (value1, value2, value3, ...),
+        (value1, value2, value3, ...)
+
+    Example:
+
+        INSERT INTO users 
+        (id, name, email, password, contact, address, dob, gender, status)
+        VALUES
+        (2, 'Jane Smith', 'jane@example.com', 'hashed_password2', '+987654321', '456 Oak St, Town', '1995-03-22', 'F', 1),
+        (3, 'Alex Johnson', 'alex@example.com', 'hashed_password3', '+1122334455', '789 Pine St, Village', '1988-07-10', 'M', 0),
+        (4, 'Avery Taylor', 'avery@example.com', 'hashed_password4', '+9988776655', '321 Elm St, City', '2000-09-05', 'O', 1),
+        (5, 'Chris Anderson', 'chris@example.com', 'hashed_password5', '+1122334466', '567 Birch St, Town', '1992-12-18', 'M', 0),
+        (6, 'Taylor Davis', 'taylor@example.com', 'hashed_password6', '+1122334477', '876 Maple St, Village', '1985-05-30', 'F', 1);
+
+![Screenshot (2660)](https://github.com/k-sameer701/Learn-SQL/assets/103239208/2a40d253-4d40-4af2-8091-e3833db1cc21)
 
 
