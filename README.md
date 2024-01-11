@@ -16,7 +16,7 @@
 * [🌱 Limit-And-Offset](#Limit-And-Offset)
 * [🌱 Aggregate-Functions](#Aggregate-Functions)
 
-## Introduction ☘️
+## Introduction 
 
 ## What is a database?
     
