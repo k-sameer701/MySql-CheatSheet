@@ -7,6 +7,7 @@
 * [3. Inserting-Data](#Inserting-Data)
 * [4. Select-And-Where](#Select-And-Where)
 * [5. Constraints](#Constraints)
+* [6. AND-OR-NOT](#AND-OR-NOT)
 
 # Introduction
 
@@ -359,7 +360,7 @@ There are two main types of aliases:
      
 # Constraints
 
-## Table Constraints
+## Table without Constraints 👇
 
 ![Screenshot (2661)-1](https://github.com/k-sameer701/Learn-SQL/assets/103239208/2ffa2d83-07c7-4a09-9603-86e0e1d516cb)
 
@@ -435,5 +436,34 @@ They are specified during the table creation using the `CREATE TABLE` statement.
             );
 
 
+# AND-OR-NOT
 
+1. **AND Operator:**
+   - The `AND` operator is used to retrieve rows that satisfy multiple conditions simultaneously.
+
+   - Example: Retrieve students who are both active (`status = 1`) and have an age greater than or equal to 20.
+     
+            SELECT * 
+            FROM students 
+            WHERE status = 1 AND age >= 20;
+     
+
+2. **OR Operator:**
+   - The `OR` operator is used to retrieve rows that satisfy at least one of multiple conditions.
+
+   - Example: Retrieve students who are either inactive (`status = 0`) or have an age less than 18.
+   
+          SELECT * 
+          FROM students 
+          WHERE status = 0 OR age < 18;
+     
+
+3. **NOT Operator:**
+   - The `NOT` operator is used to negate a condition, retrieving rows that do not satisfy a particular condition.
+   - Example: Retrieve students who are not active (`status = 0`).
+     
+            SELECT * 
+            FROM students 
+            WHERE NOT status = 0;
+     
 
