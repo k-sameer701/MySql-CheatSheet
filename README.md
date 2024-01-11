@@ -1,22 +1,22 @@
-# MySql-CheatSheet
+# 🐈‍⬛ MySql-CheatSheet
 
 ## ⛄ Table of Content
 
-* [1. Introduction](#Introduction)
-* [2. Database-Table](#Database-Table)
-* [3. Inserting-Data](#Inserting-Data)
-* [4. Select-And-Where](#Select-And-Where)
-* [5. Constraints](#Constraints)
-* [6. AND-OR-NOT](#AND-OR-NOT)
-* [7. In-Operator](#In-Operator)
-* [8. LIKE-Operator](#LIKE-Operator)
-* [9. Between-NOT-Between](#Between-NOT-Between)
-* [10. Order-By-And-Distinct](#Order-By-And-Distinct)
-* [11. Is-Null-And-Is-Not-Null](#Is-Null-And-Is-Not-Null)
+* [🌱 Introduction](#Introduction)
+* [🌱 Database-Table](#Database-Table)
+* [🌱 Inserting-Data](#Inserting-Data)
+* [🌱 Select-And-Where](#Select-And-Where)
+* [🌱 Constraints](#Constraints)
+* [🌱 AND-OR-NOT](#AND-OR-NOT)
+* [🌱 In-Operator](#In-Operator)
+* [🌱 LIKE-Operator](#LIKE-Operator)
+* [🌱 Between-NOT-Between](#Between-NOT-Between)
+* [🌱 Order-By-And-Distinct](#Order-By-And-Distinct)
+* [🌱 Is-Null-And-Is-Not-Null](#Is-Null-And-Is-Not-Null)
 * [🌱 Limit-And-Offset](#Limit-And-Offset)
 * [🌱 Aggregate-Functions](#Aggregate-Functions)
 
-# Introduction
+# ☘️ Introduction
 
 ## What is a database?
     
@@ -46,7 +46,8 @@ It is of two types:
 
 `MySQL is a relational database management system (RDBMS) developed by Oracle i.e. based on structured query language (SQL).`
 
-# Database-Table
+# ☘️ Database-Table
+
 ## What is a database table?
 `A database table is a collection of rows and columns that contains relational data.`
 
@@ -196,7 +197,7 @@ In MySQL, the specific date and time data types include:
 5. **YEAR:**
    Represents a four-digit year value.
 
-# Inserting-Data
+# ☘️ Inserting-Data
 
 ## Inserting Single Row
 
@@ -238,7 +239,7 @@ In MySQL, the specific date and time data types include:
 
 ![Screenshot (2660)](https://github.com/k-sameer701/Learn-SQL/assets/103239208/2a40d253-4d40-4af2-8091-e3833db1cc21)
 
-# Select-And-Where
+# ☘️ Select-And-Where
 
 ## SELECT Statement
 
@@ -365,7 +366,7 @@ There are two main types of aliases:
             FROM users 
             WHERE status = 1;
      
-# Constraints
+# ☘️ Constraints
 
 ## Table without Constraints 👇
 
@@ -443,7 +444,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
             );
 
 
-# AND-OR-NOT
+# ☘️ AND-OR-NOT
 
 1. **AND Operator:**
    - The `AND` operator is used to retrieve rows that satisfy multiple conditions simultaneously.
@@ -473,7 +474,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
             FROM students 
             WHERE NOT status = 0;
 
-# In-Operator
+# ☘️ In-Operator
 
 ## IN Operator
 
@@ -497,16 +498,16 @@ They are specified during the table creation using the `CREATE TABLE` statement.
         FROM students
         WHERE age IN (19,20);
 
-# LIKE-Operator
+# ☘️ LIKE-Operator
 
 ## LIKE Operator
 
-The LIKE Operator is used in a WHERE Clause to serach for a specified pattern in a column.
+The LIKE Operator is used in a WHERE Clause to search for a specified pattern in a column.
 
-- The percent sign (%) represent zero, one, or multiple characters.
+- The percent sign (%) represents zero, one, or multiple characters.
 - The underscore sign (_) represents one, single character.
 
-    Synatx:
+    Syntax:
 
         SELECT column1, column2, ...
         FROM table_name
@@ -529,7 +530,7 @@ The LIKE Operator is used in a WHERE Clause to serach for a specified pattern in
     'a%o'   :   Starts with "a" and ends with "o".
 
 
-# Between-NOT-Between
+# ☘️ Between-NOT-Between
 
 ## BETWEEN & NOT BETWEEN
 
@@ -559,7 +560,7 @@ The LIKE Operator is used in a WHERE Clause to serach for a specified pattern in
         FROM students
         WHERE age NOT BETWEEN 20 AND 30;
 
-# Order-By-And-Distinct
+# ☘️ Order-By-And-Distinct
 
 ## ORDER BY
 
@@ -595,7 +596,7 @@ The LIKE Operator is used in a WHERE Clause to serach for a specified pattern in
         SELECT DISTINCT status
         FROM students;
 
-# Is-Null-And-Is-Not-Null
+# ☘️ Is-Null-And-Is-Not-Null
 
 ## IS NULL
 
