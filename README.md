@@ -11,6 +11,9 @@
 * [7. In-Operator](#In-Operator)
 * [8. LIKE-Operator](#LIKE-Operator)
 * [9. Between-NOT-Between](#Between-NOT-Between)
+* [10. Order-By-And-Distinct](#Order-By-And-Distinct)
+* [11. Is-Null-And-Is-Not-Null](#Is-Null-And-Is-Not-Null)
+* [🌱 Limit-And-Offset](#Limit-And-Offset)
 
 # Introduction
 
@@ -554,5 +557,111 @@ The LIKE Operator is used in a WHERE Clause to serach for a specified pattern in
         SELECT *
         FROM students
         WHERE age NOT BETWEEN 20 AND 30;
+
+# Order-By-And-Distinct
+
+## ORDER BY
+
+`The ORDER BY clause in SQL is used to sort the result set of a query based on one or more columns. It is typically used at the end of a SELECT statement.`
+
+`Remember that you can sort in ascending order (ASC) or descending order (DESC). If you don't specify the order, ASC is assumed by default. `
+
+    Syntax:
+
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE condition
+        ORDER BY column1 [ASC | DESC], column2 [ASC | DESC], ...;
+
+    Example :
+
+        SELECT id, name, age, status
+        FROM students
+        ORDER BY age ASC;
+
+## DISTINCT
+
+`The DISTINCT keyword in SQL is used in a SELECT statement to eliminate duplicate rows from the result set. It returns only unique values for the specified columns.`
+
+    Syntax:
+
+        SELECT DISTINCT column1, column2, ...
+        FROM table_name
+        WHERE condition;
+
+    Example:
+
+        SELECT DISTINCT status
+        FROM students;
+
+# Is-Null-And-Is-Not-Null
+
+## IS NULL
+
+`The IS NULL operator is used to filter rows where a specified column contains a null value.`
+
+    Syntax:
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE column_name IS NULL;
+
+    Example:
+        SELECT *
+        FROM students
+        WHERE age IS NULL;
+
+
+## IS NOT NULL
+
+`The IS NOT NULL operator is used to filter rows where a specified column does not contain a null value.`
+
+    Syntax:
+
+        SELECT column1, column2, ...
+        FROM table_name
+        WHERE column_name IS NOT NULL;
+
+    Example:
+
+        SELECT *
+        FROM students
+        WHERE age IS NOT NULL;
+
+# Limit-And-Offset
+
+## LIMIT
+
+`If want to LIMIT, the number of results that are returned you can simply use the LIMIT command with several rows to LIMIT by.`
+
+    Syntax:
+
+        SELECT *
+        FROM table_name
+        LIMIT number_to_limit_by;
+
+    Example:
+
+        SELECT *
+        FROM students
+        LIMIT 3;
+
+## OFFSET
+
+`You can also specify an OFFSET from where to start returning the Data.`
+
+    Syntax:
+
+        SELECT *
+        FROM table_name
+        LIMIT number_to_limit_by OFFSET number_of_rows_to_skip;
+
+    Example:
+
+        SELECT *
+        FROM students
+        LIMIT 3 OFFSET 2;
+
+
+
 
 
