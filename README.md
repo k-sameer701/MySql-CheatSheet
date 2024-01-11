@@ -18,11 +18,11 @@
 
 ## Introduction 
 
-## What is a database?
+## ☘️ What is a database?
     
 `A database is an organized collection of structured information or data.`
 
-## What is DBMS?
+## ☘️ What is DBMS?
 
 `Database Management Systems (DBMS) are software systems used to store, retrieve, and run queries on data.`
 
@@ -42,37 +42,37 @@ It is of two types:
 
     ![--r](https://github.com/k-sameer701/Learn-MySql/assets/103239208/901affca-cdfb-4dc6-b431-8f197415267b)
     
-## What is MySQL?
+## ☘️ What is MySQL?
 
 `MySQL is a relational database management system (RDBMS) developed by Oracle i.e. based on structured query language (SQL).`
 
 ## Database-Table
 
-## What is a database table?
+## ☘️ What is a database table?
 `A database table is a collection of rows and columns that contains relational data.`
 
 ![table](https://github.com/k-sameer701/Learn-SQL/assets/103239208/4666a64d-aa02-4580-8261-f3ff67fc216a)
 
 ### 👻 Create a Database:
 
-#### Syntax:
+#### 🔥 Syntax:
     CREATE DATABASE database_name;
 
-#### Example: 
+#### 👀 Example: 
     CREATE DATABASE mydatabase;
 
 ### 👻 Switch to the Created Database:
 
-#### Syntax: 
+#### 🔥 Syntax: 
     USE database_name;
 
-#### Example: 
+#### 👀 Example: 
     USE mydatabase;
 
 ###  👻 Create Tables:
 Define table structure with columns and data types.
 
-#### Syntax:
+#### 🔥 Syntax:
     CREATE TABLE table_name 
     (
         column1 datatype1,
@@ -80,7 +80,7 @@ Define table structure with columns and data types.
         ...
     );
     
-#### Example:
+#### 👀 Example:
     CREATE TABLE users
     (
         id int unsigned,
@@ -199,25 +199,25 @@ In MySQL, the specific date and time data types include:
 
 ## Inserting-Data
 
-## Inserting Single Row
+## ☘️ Inserting Single Row
 
-    Syntax:
+    🔥 Syntax:
 
         INSERT INTO table_name 
         (column1, column2, column3, ...)
         VALUES 
         (value1, value2, value3, ...);
 
-    Example:
+    👀 Example:
 
         INSERT INTO users 
         (id, name, email, password, contact, address, dob, gender, status)
         VALUES 
         (1, 'John Doe', 'john@example.com', 'hashed_password', '+123456789', '123 Main St, City', '1990-01-15', 'M', 1);
 
-## Inserting Multiple Rows
+## ☘️ Inserting Multiple Rows
 
-    Syntax:
+    🔥 Syntax:
 
         INSERT INTO table_name 
         (column1, column2, column3, ...)
@@ -226,7 +226,7 @@ In MySQL, the specific date and time data types include:
         (value1, value2, value3, ...),
         (value1, value2, value3, ...)
 
-    Example:
+    👀 Example:
 
         INSERT INTO users 
         (id, name, email, password, contact, address, dob, gender, status)
@@ -241,16 +241,16 @@ In MySQL, the specific date and time data types include:
 
 ## Select-And-Where
 
-## SELECT Statement
+## ☘️ SELECT Statement
 
 `In MySQL, you use the SELECT statement to retrieve data from one or more tables. `
 
-    Syntax:
+    🔥 Syntax:
 
         SELECT column1, column2, ...
         FROM table_name;
 
-    Example:
+    👀 Example:
 
         SELECT name, email
         FROM users;
@@ -258,35 +258,35 @@ In MySQL, the specific date and time data types include:
 
     If you want to select all columns from a table, you can use the wildcard *
 
-    Syntax:
+    🔥 Syntax:
 
         SELECT *
         FROM table_name;
 
-    Example:
+    👀 Example:
 
         SELECT *
         FROM users;
 
-## WHERE Clause
+## ☘️ WHERE Clause
 
 `The WHERE clause is used to filter records.`
 
 `It is used to extract only those records that fulfill a specified condition.`
 
-    Syntax:
+    🔥 Syntax:
 
         SELECT column1, column2, ...
         FROM table_name
         WHERE condition
 
-    Example:
+    👀 Example:
         
         SELECT id, name, email
         FROM users
         WHERE gender = 'M' AND status = 1;
 
-## WHERE Conditions
+## ☘️ WHERE Conditions
 
 `In SQL, the WHERE clause is used to filter the rows returned by a query based on specified conditions. Here are common conditions that can be used in conjunction with the WHERE clause:`
 
@@ -330,7 +330,7 @@ In MySQL, the specific date and time data types include:
     - Used with subqueries for comparing values.
     - Example: `WHERE column_name > ANY (SELECT column_name FROM another_table);`
 
-## ALIAS
+## ☘️ ALIAS
 
 `In SQL, an alias is a temporary name. It is used to provide a more readable or meaningful name to a table or column, especially when dealing with complex queries or when working with the result of a query.`
 
@@ -339,13 +339,13 @@ There are two main types of aliases:
 1. **Table Alias:**
    - Used to give a table a temporary, alternative name in a query.
 
-   - Syntax:
+   - 🔥 Syntax:
      
             SELECT column1, column2, ...
             FROM table_name AS alias_name
             WHERE condition;
      
-   - Example:
+   - 👀 Example:
      
             SELECT name, id
             FROM users AS Active_Users
@@ -354,13 +354,13 @@ There are two main types of aliases:
 2. **Column Alias:**
    - Used to assign a temporary name to a column in the result set.
    
-   - Syntax:
+   - 🔥 Syntax:
      
             SELECT column_name AS alias_name, ...
             FROM table_name
             WHERE condition;
             
-   - Example:
+   - 👀 Example:
      
             SELECT name AS E_Name, id AS U_ID
             FROM users 
@@ -378,7 +378,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 
 1. **PRIMARY KEY Constraint:**
    - Ensures that a column or a combination of columns uniquely identifies each row in the table.
-   - Example:
+   - 👀 Example:
      
             CREATE TABLE employees (
                 employee_id INT PRIMARY KEY,
@@ -390,7 +390,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 
 2. **FOREIGN KEY Constraint:**
    - Establishes a link between two tables, enforcing referential integrity.
-   - Example:
+   - 👀 Example:
      
             CREATE TABLE orders (
                 order_id INT PRIMARY KEY,
@@ -401,7 +401,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 
 3. **UNIQUE Constraint:**
    - Ensures that all values in a column (or a combination of columns) are unique.
-   - Example:
+   - 👀 Example:
      
             CREATE TABLE products (
                 product_name VARCHAR(100) UNIQUE,
@@ -412,7 +412,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 
 4. **CHECK Constraint:**
    - Specifies a condition that must be satisfied for each row in the table.
-   - Example:
+   - 👀 Example:
      
             CREATE TABLE employees (
                 employee_id INT,
@@ -422,7 +422,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 
 5. **DEFAULT Constraint:**
    - Provides a default value for a column if no value is specified during an INSERT operation.
-   - Example:
+   - 👀 Example:
      
             CREATE TABLE students
             (
@@ -436,7 +436,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 
 6. **NOT NULL Constraint:**
    - Ensures that a column cannot have a NULL value.
-   - Example:
+   - 👀 Example:
      
             CREATE TABLE orders (
                 order_id INT,
@@ -449,7 +449,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 1. **AND Operator:**
    - The `AND` operator is used to retrieve rows that satisfy multiple conditions simultaneously.
 
-   - Example: Retrieve students who are both active (`status = 1`) and have an age greater than or equal to 20.
+   - 👀 Example: Retrieve students who are both active (`status = 1`) and have an age greater than or equal to 20.
      
             SELECT * 
             FROM students 
@@ -459,7 +459,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 2. **OR Operator:**
    - The `OR` operator is used to retrieve rows that satisfy at least one of multiple conditions.
 
-   - Example: Retrieve students who are either inactive (`status = 0`) or have an age less than 18.
+   - 👀 Example: Retrieve students who are either inactive (`status = 0`) or have an age less than 18.
    
           SELECT * 
           FROM students 
@@ -468,7 +468,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 
 3. **NOT Operator:**
    - The `NOT` operator is used to negate a condition, retrieving rows that do not satisfy a particular condition.
-   - Example: Retrieve students who are not active (`status = 0`).
+   - 👀 Example: Retrieve students who are not active (`status = 0`).
      
             SELECT * 
             FROM students 
@@ -476,11 +476,11 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 
 ## In-Operator
 
-## IN Operator
+## ☘️ IN Operator
 
 `The SQL IN operator is used to specify multiple values in a WHERE clause for a SELECT, UPDATE, DELETE, or INSERT statement. It is typically used to reduce the use of multiple OR conditions in a query.`
 
-    Syntax:
+    🔥 Syntax:
 
         SELECT column1, column2, ...
         FROM table_name
@@ -492,7 +492,7 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 - `column_name`: The column against which you want to compare values.
 - `(value1, value2, ...)`: The list of values to compare with the specified column.
 
-    Example:
+    👀 Example:
 
         SELECT *
         FROM students
@@ -500,20 +500,20 @@ They are specified during the table creation using the `CREATE TABLE` statement.
 
 ## LIKE-Operator
 
-## LIKE Operator
+## ☘️ LIKE Operator
 
 The LIKE Operator is used in a WHERE Clause to search for a specified pattern in a column.
 
 - The percent sign (%) represents zero, one, or multiple characters.
 - The underscore sign (_) represents one, single character.
 
-    Syntax:
+    🔥 Syntax:
 
         SELECT column1, column2, ...
         FROM table_name
         WHERE column_name LIKE pattern;
 
-    Example:
+    👀 Example:
 
         SELECT name
         FROM students
@@ -532,29 +532,29 @@ The LIKE Operator is used in a WHERE Clause to search for a specified pattern in
 
 ## Between-NOT-Between
 
-## BETWEEN & NOT BETWEEN
+## ☘️ BETWEEN & NOT BETWEEN
 
 `The BETWEEN and NOT BETWEEN operators in SQL are used to filter the result set based on a range of values. These operators are typically used in the WHERE clause of a SQL query.`
 
-    Syntax (BETEEN):
+    🔥 Syntax (BETEEN):
 
         SELECT column1, column2, ...
         FROM table_name
         WHERE column_name BETWEEN value1 AND value2;
 
-    Example:
+    👀 Example:
 
         SELECT *
         FROM students
         WHERE age BETWEEN 20 AND 30;
 
-    Syntax (NOT BETWEEN):
+    🔥 Syntax (NOT BETWEEN):
 
         SELECT column1, column2, ...
         FROM table_name
         WHERE column_name NOT BETWEEN value1 AND value2;
 
-    Example:
+    👀 Example:
 
         SELECT *
         FROM students
@@ -562,68 +562,68 @@ The LIKE Operator is used in a WHERE Clause to search for a specified pattern in
 
 ## Order-By-And-Distinct
 
-## ORDER BY
+## ☘️ ORDER BY
 
 `The ORDER BY clause in SQL is used to sort the result set of a query based on one or more columns. It is typically used at the end of a SELECT statement.`
 
 `Remember that you can sort in ascending order (ASC) or descending order (DESC). If you don't specify the order, ASC is assumed by default. `
 
-    Syntax:
+    🔥 Syntax:
 
         SELECT column1, column2, ...
         FROM table_name
         WHERE condition
         ORDER BY column1 [ASC | DESC], column2 [ASC | DESC], ...;
 
-    Example :
+    👀 Example :
 
         SELECT id, name, age, status
         FROM students
         ORDER BY age ASC;
 
-## DISTINCT
+## ☘️ DISTINCT
 
 `The DISTINCT keyword in SQL is used in a SELECT statement to eliminate duplicate rows from the result set. It returns only unique values for the specified columns.`
 
-    Syntax:
+    🔥 Syntax:
 
         SELECT DISTINCT column1, column2, ...
         FROM table_name
         WHERE condition;
 
-    Example:
+    👀 Example:
 
         SELECT DISTINCT status
         FROM students;
 
 ## Is-Null-And-Is-Not-Null
 
-## IS NULL
+## ☘️ IS NULL
 
 `The IS NULL operator is used to filter rows where a specified column contains a null value.`
 
-    Syntax:
+    🔥 Syntax:
         SELECT column1, column2, ...
         FROM table_name
         WHERE column_name IS NULL;
 
-    Example:
+    👀 Example:
         SELECT *
         FROM students
         WHERE age IS NULL;
 
 
-## IS NOT NULL
+## ☘️ IS NOT NULL
 
 `The IS NOT NULL operator is used to filter rows where a specified column does not contain a null value.`
 
-    Syntax:
+    🔥 Syntax:
 
         SELECT column1, column2, ...
         FROM table_name
         WHERE column_name IS NOT NULL;
 
-    Example:
+    👀 Example:
 
         SELECT *
         FROM students
@@ -631,33 +631,33 @@ The LIKE Operator is used in a WHERE Clause to search for a specified pattern in
 
 ## Limit-And-Offset
 
-## LIMIT
+## ☘️ LIMIT
 
 `If want to LIMIT, the number of results that are returned you can simply use the LIMIT command with several rows to LIMIT by.`
 
-    Syntax:
+    🔥 Syntax:
 
         SELECT *
         FROM table_name
         LIMIT number_to_limit_by;
 
-    Example:
+    👀 Example:
 
         SELECT *
         FROM students
         LIMIT 3;
 
-## OFFSET
+## ☘️ OFFSET
 
 `You can also specify an OFFSET from where to start returning the Data.`
 
-    Syntax:
+    🔥 Syntax:
 
         SELECT *
         FROM table_name
         LIMIT number_to_limit_by OFFSET number_of_rows_to_skip;
 
-    Example:
+    👀 Example:
 
         SELECT *
         FROM students
@@ -665,7 +665,7 @@ The LIKE Operator is used in a WHERE Clause to search for a specified pattern in
 
 ## Aggregate-Functions
 
-## AGGREGATE FUNCTIONS
+## ☘️ AGGREGATE FUNCTIONS
 
 `In MySQL, aggregate functions are used to perform a calculation on a set of values and return a single value.`
 
@@ -674,7 +674,7 @@ Here are some common aggregate functions in MySQL:
 1. **COUNT():**
    - Counts the number of rows in a result set.
     
-    Syntax:
+    🔥 Syntax:
     
         SELECT COUNT(column_name) FROM table_name WHERE condition;
 
@@ -682,7 +682,7 @@ Here are some common aggregate functions in MySQL:
 2. **SUM():**
    - Calculates the sum of values in a numeric column.
     
-    Syntax:
+    🔥 Syntax:
         
         SELECT SUM(column_name) FROM table_name WHERE condition;
    
@@ -690,7 +690,7 @@ Here are some common aggregate functions in MySQL:
 3. **AVG():**
    - Calculates the average of values in a numeric column.
 
-    Syntax:
+    🔥 Syntax:
         
         SELECT AVG(column_name) FROM table_name WHERE condition;
    
@@ -698,7 +698,7 @@ Here are some common aggregate functions in MySQL:
 4. **MIN():**
    - Finds the minimum value in a column.
 
-    Syntax:
+    🔥 Syntax:
     
         SELECT MIN(column_name) FROM table_name WHERE condition;
    
@@ -706,12 +706,12 @@ Here are some common aggregate functions in MySQL:
 5. **MAX():**
    - Finds the maximum value in a column.
    
-    Syntax:
+    🔥 Syntax:
     
         SELECT MAX(column_name) FROM table_name WHERE condition;
    
 
-    Example:
+    👀 Example:
 
         SELECT
         SUM() AS total_sales,
