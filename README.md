@@ -1,10 +1,10 @@
-# Learn-MySql
+# MySql-CheatSheet
 
 ## ⛄ Table of Content
 
-* [1. Introduction](#Introduction)
+* [1. Introduction](#1️⃣Introduction)
 
-# Introduction
+# 1️⃣ Introduction
 
 ## What is a database?
     
@@ -21,10 +21,6 @@ It is of two types:
     A relational database is a collection of data items with pre-defined relationships between them, stored in the form of tables, rows, and columns.
 
     Examples: MySQL, Oracle, PostgreSQL.
-    
-    ![1688726331495](https://github.com/k-sameer701/Learn-SQL/assets/103239208/543ece65-d964-476e-bfcb-2fa1cb120126)
-
-
 
 - `Non-Relational (No-SQL)`
 
@@ -32,9 +28,9 @@ It is of two types:
     
     Examples: MongoDB, Cassandra, Redis. 
 
-    ![types-db](https://github.com/k-sameer701/Learn-SQL/assets/103239208/a2694b9b-191d-44a7-8241-73779925b2c6)
+    ![Relational SQL](https://github.com/k-sameer701/Learn-MySql/assets/103239208/8521f800-eb51-4488-9836-1b0bb591a5bb)
 
-
+    
 ## What is MySQL?
 
 `MySQL is a relational database management system (RDBMS) developed by Oracle i.e. based on structured query language (SQL).`
