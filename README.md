@@ -6,6 +6,7 @@
 * [2. Database-Table](#Database-Table)
 * [3. Inserting-Data](#Inserting-Data)
 * [4. Select-And-Where](#Select-And-Where)
+* [5. Constraints](#Constraints)
 
 # Introduction
 
@@ -356,6 +357,83 @@ There are two main types of aliases:
             FROM users 
             WHERE status = 1;
      
+# Constraints
+
+## Table Constraints
+
+![Screenshot (2661)-1](https://github.com/k-sameer701/Learn-SQL/assets/103239208/2ffa2d83-07c7-4a09-9603-86e0e1d516cb)
+
+
+In MySQL, table constraints are rules or conditions applied to the columns in a table to maintain the integrity, accuracy, and relationships of the data. 
+They are specified during the table creation using the `CREATE TABLE` statement. Constraints can also be added or modified later using the `ALTER TABLE` statement.
+
+1. **PRIMARY KEY Constraint:**
+   - Ensures that a column or a combination of columns uniquely identifies each row in the table.
+   - Example:
+     
+            CREATE TABLE employees (
+                employee_id INT PRIMARY KEY,
+                first_name VARCHAR(50),
+                last_name VARCHAR(50)
+            );
+
+            
+
+2. **FOREIGN KEY Constraint:**
+   - Establishes a link between two tables, enforcing referential integrity.
+   - Example:
+     
+            CREATE TABLE orders (
+                order_id INT PRIMARY KEY,
+                customer_id INT,
+                FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+            );
+            
+
+3. **UNIQUE Constraint:**
+   - Ensures that all values in a column (or a combination of columns) are unique.
+   - Example:
+     
+            CREATE TABLE products (
+                product_name VARCHAR(100) UNIQUE,
+                price DECIMAL(10, 2)
+            );
+
+            
+
+4. **CHECK Constraint:**
+   - Specifies a condition that must be satisfied for each row in the table.
+   - Example:
+     
+            CREATE TABLE employees (
+                employee_id INT,
+                salary DECIMAL(10, 2) CHECK (salary >= 0)
+            );
+            
+
+5. **DEFAULT Constraint:**
+   - Provides a default value for a column if no value is specified during an INSERT operation.
+   - Example:
+     
+            CREATE TABLE students
+            (
+                id INT NOT NULL UNIQUE,
+                name VARCHAR(100) NOT NULL,
+                email VARCHAR(150) NOT NULL UNIQUE,
+                age TINYINT CHECK (age >= 18),
+                status BOOLEAN DEFAULT 1
+            );
+            
+
+6. **NOT NULL Constraint:**
+   - Ensures that a column cannot have a NULL value.
+   - Example:
+     
+            CREATE TABLE orders (
+                order_id INT,
+                order_date DATE NOT NULL
+            );
+
 
 
 
