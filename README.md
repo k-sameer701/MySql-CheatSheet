@@ -3,8 +3,8 @@
 ## ⛄ Table of Content
 
 * [1. Introduction](#Introduction)
-* [2. Database Table](#DatabaseTable)
-* [3. Inserting Data](#InsertingData)
+* [2. Database-Table](#Database-Table)
+* [3. Inserting-Data](#Inserting-Data)
 
 # Introduction
 
@@ -36,7 +36,7 @@ It is of two types:
 
 `MySQL is a relational database management system (RDBMS) developed by Oracle i.e. based on structured query language (SQL).`
 
-# Database Table
+# Database-Table
 ## What is a database table?
 `A database table is a collection of rows and columns that contains relational data.`
 
@@ -186,7 +186,9 @@ In MySQL, the specific date and time data types include:
 5. **YEAR:**
    Represents a four-digit year value.
 
-# Inserting Single Row
+# Inserting-Data
+
+## Inserting Single Row
 
     Syntax:
 
@@ -201,8 +203,6 @@ In MySQL, the specific date and time data types include:
         (id, name, email, password, contact, address, dob, gender, status)
         VALUES 
         (1, 'John Doe', 'john@example.com', 'hashed_password', '+123456789', '123 Main St, City', '1990-01-15', 'M', 1);
-
-# Inserting Data
 
 ## Inserting Multiple Rows
 
