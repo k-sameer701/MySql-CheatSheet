@@ -2,9 +2,9 @@
 
 ## ⛄ Table of Content
 
-* [1. Introduction](#1️⃣Introduction)
+* [1. Introduction](#1️Introduction)
 
-# 1️⃣ Introduction
+# Introduction
 
 ## What is a database?
     
@@ -28,8 +28,7 @@ It is of two types:
     
     Examples: MongoDB, Cassandra, Redis. 
 
-    ![Relational SQL](https://github.com/k-sameer701/Learn-MySql/assets/103239208/8521f800-eb51-4488-9836-1b0bb591a5bb)
-
+    ![--r](https://github.com/k-sameer701/Learn-MySql/assets/103239208/901affca-cdfb-4dc6-b431-8f197415267b)
     
 ## What is MySQL?
 
